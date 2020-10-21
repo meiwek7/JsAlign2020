@@ -84,7 +84,7 @@
         
         alert("BiggerNumber = "+biggerNumber);*/
         
-        let x=prompt("Enter x");
+        /*let x=prompt("Enter x");
         let y=prompt("Enter y");
         
         if(x>0){
@@ -97,7 +97,21 @@
                         alert("II quarter");
                     else
                         alert("III quarter");
-                    }
+                    }*/
+        
+        let x = prompt("Enter x");
+        let y;
+        
+        if(x>20){
+            y=x * -1 + 9;
+            alert(y);
+        }else 
+            if((x < -10 && x >= -49)||(x > 0 && x <= 10))
+            {
+                y=10 * (x**3) + ((7 * x)/5) + 2;
+                alert(y);
+            }else
+                alert("Takogo x doesn`t exist");
     </script>
 </head>
 <body>
