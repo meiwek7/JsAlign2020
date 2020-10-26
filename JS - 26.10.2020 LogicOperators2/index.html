@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //alert(true || false); //true
+        //alert(false || true); //true
+        //alert(false || false); //false
+        //alert(true || true); //true
+        // let a = prompt("enter value from 0 to 10")
+        // if(a < 0 || a > 10){
+        // alert("tebeb russkim yazikom skazali!")
+        // }
+        // alert(null || 1 || undefined);
+        // alert(5||2)
+        //alert(true && true); //true
+        //alert(true && false); //false
+        //alert(false && true); //false
+        //alert(false && false); //false
+        // let hour = prompt("enter hour");
+        // let minute = prompt("enter minute");
+        // if(hour == 12 && minute == 0){
+        // alert("полдень");
+        // }
+        // alert(1 && undefined && 2);
+        
+        // let value = false;
+        // alert(!value);
+        
+        //?? - проверка на undefined
+        
+        /*let name;
+        let surname;
+        let nickname = "some";
+        alert(name || surname || nickname);*/
+        
+        /*let a = 0;
+        alert(a || 1); //OR
+        alert(a ?? 1);*/
+        
+        /*let time;
+        time=prompt("Enter minutes");
+        
+        if(time > 60 || time < 0 || time == undefined|| time == null)
+            alert("invalid value");
+        else if(time <= 15)
+            alert("I quarter");
+            else if(time <= 30)
+                alert("II quarter");
+                else if(time <= 45)
+                    alert("III quarter");
+                    else
+                        alert("IV quarter");*/
+            
+/*        let firstMultiplier = prompt("Enter first multiplier");
+        let secondMultiplier = prompt("Enter second multiplier");
+        let userResult = prompt("Enter your result");
+        
+        let test = secondMultiplier.toString().length;
+        let test2 = Number.isInteger(firstMultiplier);
+        let test3 = Number.isInteger(parseInt(firstMultiplier, 10));
+        
+        if(Number.isInteger(parseInt(firstMultiplier, 10)) &&  Number.isInteger(parseInt(secondMultiplier, 10)) && firstMultiplier.toString().length == 1 && secondMultiplier.toString().length == 1)
+        {
+            if((firstMultiplier*secondMultiplier)==userResult)
+                alert(firstMultiplier+"*"+secondMultiplier+"="+userResult+" is Correct");
+            else
+                alert("No! Right result is "+(firstMultiplier*secondMultiplier));
+        }
+        else
+            alert("Invalid number");*/
+        
+        
+        
+       /* let x_point = 4;
+        let y_point = 9;
+        let r_circle = 10;
+        
+        let hypotenuse = Math.sqrt(x_point ** 2 + y_point ** 2);
+      
+        alert((hypotenuse <= r_circle) ? "Точка принадлежит кругу" : "Точка НЕ принадлежит кругу");*/
+        
+        
+            
+        let number = prompt("Enter 3x-value number");
+        let outputNum;
+        
+        if(Number.isInteger(parseInt(number, 10)) && number.toString().length == 3)
+        {
+                if(number%2 == 0)
+                {
+                    outputNum = (number%10)+((number/10)%10)+((number/100)%10);
+                    alert("sum = "+outputNum);
+                }else
+                    {
+                        outputNum = (number%10)*((number/10)%10)*((number/100)%10);
+                        alert("mult = "+outputNum);
+                    }
+        }else
+            {
+                alert("Incorrect number");
+            }
+            
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
