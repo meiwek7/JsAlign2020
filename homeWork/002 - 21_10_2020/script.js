@@ -152,6 +152,51 @@
 // балла. После вопросов выведите пользователю количество
 // набранных баллов.
 
+// alert("Please, answer three questions\n");
+
+// let counter = 0;
+
+// let answer = prompt("Type the number of an answer, please:\n"+
+//                     "First one:\nIs JS more suitable for imperative or declarative style as a programming language?\n"+
+//                     "1) Imperative\n"+
+//                     "2) Declarative\n"+
+//                     "3) JavaScript allows for various programming styles. Most programmers use imperative style, but the language also allows declarative style.");
+
+// if(answer == 3 || answer == "3)")
+//     counter+=2;
+
+// answer = prompt("Type the number of an answer, please:\n"+
+//                 "Second one:\nWhat will be the output of this code?\nvar x = 21;\nvar girl = function () {\nconsole.log(x);\nvar x = 20;\n};\ngirl ();\n"+
+//                 "1) 20\n"+
+//                 "2) 21\n"+
+//                 "3) undefined");
+
+// if(answer == 3 || answer == "3)")
+//     counter+=2;
+
+// answer = prompt("Type the number of an answer, please:\n"+
+//                 "Second one:\nWhich Came First, the Chicken or the Egg?\n"+
+//                 "1) Chicken\n"+
+//                 "2) Egg\n"+
+//                 "3) Both options");
+
+// if(answer == 2 || answer == "2)")
+//     counter+=2;
+
+// alert("Thank you, you get "+counter+" points");
+
 // 10) Запросить дату (день, месяц, год) и вывести следующую
 // за ней дату. Учтите возможность перехода на следующий
 // месяц, год, а также високосный год.
+
+let userDate = prompt("Please enter date in format like that:\n14, 02, 1996");
+
+let days = userDate.slice(0,2);
+let month = userDate.slice(4,6);
+let year = userDate.slice(8);
+
+let userDateFormated = new Date(year, month-1, days);
+
+let nextDay = new Date(userDateFormated.valueOf()+86400000);
+
+alert("Your date is:\n"+userDateFormated+"\nNext date is:\n"+nextDay);
