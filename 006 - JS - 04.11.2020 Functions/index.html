@@ -44,20 +44,109 @@
 
         // sum(value1, value2);
 
-        function checkAge(age){
-            return age >= 18;
+        // function checkAge(age){
+        //     return age >= 18;
 
-            // if(age < 18)
-            //     return false;
-            // else
-            //     return true;
+        //     // if(age < 18)
+        //     //     return false;
+        //     // else
+        //     //     return true;
+        // }
+
+        // let age = +prompt("enter your age");
+
+        // let isAdult = checkAge(age);
+
+        // alert(isAdult ? "uze mozno" : "idi uchi uroki");
+
+        // function sum(x1, x2){
+        //     let x3 = x1 + x2;
+        //     return x3;
+        // }
+
+        // let s = sum(2, 3);
+
+        // console.log("s =" + s);
+
+        // function getNameSurname(name, surname){
+        //     return "Your name is " + name + " and surname is " + surname;
+        // }
+        
+        // let str = getNameSurname("Vasya", "Pupkin");
+
+        // alert(str);
+
+        // function iterate(n){
+        //     for(let i = 0; i < n; i++){
+        //         console.log("Hello " + i);
+        //     }
+        // }
+        
+        // let a = prompt("enter iterations count");
+        // iterate(a);
+
+        // var a = +prompt("Vvedi chislo");
+        // var b = +prompt("Vvedi chislo");
+        // var c = +prompt("Vvedi chislo");
+
+        // function sumTriChislaEpta(a,b,c){
+        //     return a+b+c;
+        // }
+
+        // alert(sumTriChislaEpta(a,b,c));
+
+        // function isEven(a){
+        //     return !(a%2);
+        // }
+
+        // var odinChislo = prompt("EnterChislo");
+
+        // var dvaChislo = prompt("dvaChislo");
+
+        // function vivestiChegotoTam(menshZnach, bolshZnach){
+        //     for(;a<b;b++){
+        //         alert("Hello"+a);
+        //     }
+        // }
+
+        // vivestiChegotoTam(odinChislo, dvaChislo);
+
+       
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
         }
 
-        let age = +prompt("enter your age");
+        function calculateChegotoTam(a, b){
+            var random = 0;
+            for(var i=0;i<10;)
+            {
+                random = getRandomInt(a,b);
+                if(random == 0){
+                    console.log(random);
+                    i++;
+                    continue;
+                }
+                if(!(random%4))
+                    continue;
+                else
+                {
+                    console.log(random);
+                    i++;
+                }
+                
+                
+            }
+           
+        }
 
-        let isAdult = checkAge(age);
+        var odinChislo = prompt("EnterNiznGranic");
 
-        alert(isAdult ? "uze mozno" : "idi uchi uroki");
+        var dvaChislo = prompt("EnterVerxnGranic");
+
+        calculateChegotoTam(odinChislo,dvaChislo);
 
     </script>
 </body>
