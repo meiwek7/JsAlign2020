@@ -73,19 +73,69 @@
         //-----------------
         //strelochniye function
 
-        let sub = () => {
-            let a = prompt("enter a");
-            let b = prompt("enter b");
-            return a - b;
-        };
+        // let sub = () => {
+        //     let a = prompt("enter a");
+        //     let b = prompt("enter b");
+        //     return a - b;
+        // };
 
-        let sqr = a => a * a;
+        // let sqr = a => a * a;
 
 
-        alert(sqr(10));
+        // alert(sqr(10));
 
         //-----------------
 
+        // function mult(a,b){
+        //     alert (a*b);
+        // }
+
+        // function sum(a,b){
+        //     alert (a+b);
+        // }
+
+        // let moyaFunc = (a, b, f1, f2) => {
+        //     if(!(a%2) && !(b%2)){
+        //         f1(a,b);
+        //         return;
+        //     }
+        //     if(a%2 && b%2){
+        //         f2(a,b);
+        //         return;
+        //     }
+        //     if(a%2)
+        //         alert (a);
+        //     else
+        //         alert (b);
+        // };
+
+        // moyaFunc(+prompt("a"),+prompt("b"),mult,sum);
+
+
+        // // -----
+        // let existenceOfTriangle = (a,b,c) =>{
+        //     if (a + b > c && a + c > b && b + c > a)
+        //         alert("Треугольник существует");
+        //     else
+        //         alert("Треугольник не существует");
+        // }
+
+        // existenceOfTriangle(10,15,20);
+        
+
+        // 3-iy
+
+
+        let calculateAccidente = (volume) =>{
+            let days = 0;
+            for(;volume >= 10;){
+                volume *= 0.9;
+                days++;
+            }
+            alert("Tank will be alive "+days);
+        }
+
+        calculateAccidente(12);
 
     </script>
 </body>
