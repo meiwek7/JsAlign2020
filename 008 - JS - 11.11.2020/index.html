@@ -20,23 +20,81 @@
 
         //------------------------------------------------
 
-        let user = {
-            name : "Nikolay",
-            userId : 123,
-            isOnline : true,
-            "1" : "first",
-            "user age" : 21,
-            "let" : "key word"
-        };
+        // let user = {
+        //     name : "Nikolay",
+        //     userId : 123,
+        //     isOnline : true,
+        //     "1" : "first",
+        //     "user age" : 21,
+        //     "let" : "key word"
+        // };
 
         // alert(`${user.name} ${user.userId} ${user.isOnline}`);
         // delete user.userId;
 
-        let input = prompt("enter your prop", "name");
+        // let input = prompt("enter your prop", "name");
 
-        alert(`${user[input]}`);
+        // alert(`${user[input]}`);
 
-        alert(`${user["let"]} ${user["userId"]} ${user["1"]}`);
+        // alert(`${user["let"]} ${user["userId"]} ${user["1"]}`);
+
+        // let name = prompt("enter fruit field to create", "name");
+
+        // let fruit = {
+        //     [name] : "Banana",
+        // };
+
+        // alert(fruit.kind);
+
+        // function makeComputer(ramMemory, hardDisk, cpuFrequency) {
+        //     return {
+        //         ramMemory,
+        //         hardDisk,
+        //         cpuFrequency
+        //     }
+        // }
+
+        // let lowComputer = makeComputer(128, 40, 1000);
+        // let topComputer = makeComputer(65536, 8 * 1024, 16 * 3700);
+
+        // // alert(`
+        // //     ${topComputer["ramMemory"]}
+        // //     ${topComputer["hardDisk"]}
+        // //     ${topComputer["cpuFrequency"]}
+        // //     `);
+
+        // // alert("noSuchLabel" in lowComputer);
+        // // alert(lowComputer.noSuchLabel === undefined);
+        
+        // for (key in topComputer) {
+        //     console.log(`key : ${key} value: ${topComputer[key]}`);
+        // }
+        // -------
+
+        let car = {
+            maxSpeed : 240,
+            power : 340,
+            info:{
+                model : "X5",
+                brand : "BMW"
+            }
+        };
+
+        function createCar(brand, model, maxSpeed, power){
+            return{
+                info : {
+                    model, brand
+                },
+                maxSpeed,
+                power
+            }
+        };
+
+        let bexa = createCar({brand:"BMW", model:"X5"}, 240, 340);
+
+        let test = car.info.brand;
+
+        console.log(bexa.info.brand);
 
     </script>
 </body>
