@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let student = new Object();
+        // student.name = "Misha";
+        // student.age = 21;
+        // student.group = "KV-23";
+
+        // alert(`${student.name} ${student.age} ${student.group}`);
+
+        // student.name = "Edik";
+
+        // alert(student.name);
+
+        //------------------------------------------------
+
+        let user = {
+            name : "Nikolay",
+            userId : 123,
+            isOnline : true,
+            "1" : "first",
+            "user age" : 21,
+            "let" : "key word"
+        };
+
+        // alert(`${user.name} ${user.userId} ${user.isOnline}`);
+        // delete user.userId;
+
+        let input = prompt("enter your prop", "name");
+
+        alert(`${user[input]}`);
+
+        alert(`${user["let"]} ${user["userId"]} ${user["1"]}`);
+
+    </script>
+</body>
+</html>
