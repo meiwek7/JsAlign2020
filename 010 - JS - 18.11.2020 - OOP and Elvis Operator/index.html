@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function Student(name, group = 1){
+        //     this.name = name;
+        //     this.group = group;
+
+        //     this.getName = function(){
+        //         alert(`My name is ${this.name}`);
+        //     };
+
+        //     this.hello = function(hello){
+        //         alert(`${hello}, my name is ${this.name}`);
+        //     };
+
+        //     // return //7 примитивный тип проигнориться
+
+        // };
+
+        // let vasya = new Student("Vasya");
+        // let petya = new Student("Petya");
+        // let piotr = new Student("Piotr", 2);
+
+        // petya.getName();
+        // petya.hello("Privet");
+
+        // alert(vasya.name + " " + vasya.group);
+
+
+        // function Student(){
+        //     if(new.target)
+        //         alert("this is constructor");
+        //     else{
+        //         alert("this is function");
+        //     }
+        // }
+
+        // Student();
+
+        // new Student();
+        
+         //   --------------------------
+
+        // function User(name){
+        //     this.name = name;
+
+        //     return {name: "Test Name"};
+        // }
+
+        // let user = new User("Sasha");
+
+        // alert(user.name);
+
+        //--------------------------
+
+        // let user = null;
+        // let a = 0;
+
+        // user?.inc(a++); // строчка дальше выполнятся не будет
+
+        // alert(user?.name?.surname);
+        // alert(a);
+
+        //--------------------------
+
+        // let student1 = {
+        //     name(){
+        //         alert("Vasya");
+        //     },
+        //     age : 12,
+        // };
+
+        // let student2 = null;
+
+        // alert(student1?.["age"]);
+        // alert(student2?.["age"]);
+
+        // // let student2 = {
+
+        // // };
+
+        // student1.name?.();
+        // student2.name?.();
+
+        //--------------------------1
+
+        // function Accumulator(startingValue){
+        //     this.value = startingValue;
+        //     this.read = function(addValue){
+        //         this.value += addValue;
+        //         alert(`Current accumulated value = ${this.value}`);
+        //     };
+        // };
+
+        // let acum = new Accumulator(+prompt("Enter starting value"));
+        // acum.read(+prompt("Add this value to acum"));
+
+        //--------------------------3,4
+
+        function Fraction(num, denum){
+            this.num = num;
+            this.denum = denum;
+            this.multiplyFraction = function(fraction){
+                return new Fraction(this.num*fraction.num, this.denum*fraction.denum);
+            };
+            this.divideFraction = function(fraction){
+                return new Fraction(this.num*fraction.denum, this.denum*fraction.num);
+            };
+            
+            this.addFraction = function(fraction){
+                return new Fraction(this.num*fraction.denum + fraction.num*this.denum, this.denum*fraction.denum + fraction.denum*this.denum);
+            };
+            this.minusFraction = function(fraction){
+                return new Fraction(this.num*fraction.denum - fraction.num*this.denum, this.denum*fraction.denum - fraction.denum*this.denum);
+            };
+        };
+
+    </script>
+</body>
+</html>
