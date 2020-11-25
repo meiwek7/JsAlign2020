@@ -8,14 +8,96 @@
 <body>
     <script>
 
-         let arr = [1,2,3,4,5];
+         //let arr = [1,2,3,1,4,5];
+         //let letters = ["a","b","c"];
 
-        // arr.splice(1, 0, {name : "vasya"}, {name : "misha"},5,5,5,5);
+        // arr.splice(1, 0, {name : "vasya"}, {name : "misha"},5,5,5,5); замена
         // alert(arr);
 
-        let subArr = arr.slice(1, 3);
+        //let subArr = arr.slice(1, 3);
         //arr.slice(-3) // отрежет 3 с конца
-        alert(subArr);
+        //alert(subArr);
+
+        // let bigArr = arr.concat([6,7,8], 8, 9);
+        // alert(bigArr);
+
+        //letters.forEach((a, b) => console.log(`item ${a} index ${b}`));
+        //alert(arr.indexOf(1)); //Вернёт 0
+        //alert(arr.lastIndexOf(1)); //Вернёт 3
+
+        // if(arr.indexOf(8) != -1){
+        //     alert("8 in arr");
+        // }else{
+        //     alert("no 8 in arr");
+        // }
+
+        // let students = [
+        //     {group : 1, name : "vasya"},
+
+        //     {group : 2, name : "sveta"},
+
+        //     {group : 1, name : "nina"}
+        // ];
+        
+        //let firstGroup = students.filter(item => item.group == 1);
+
+        //find ищет вхождение
+        //filter отсеивает все элементы
+
+        //alert(`${vasya.name} ${vasya.group}`);
+
+        //firstGroup.forEach((item, index) => console.log(`${item.name} ${index}`));
+
+        // let mapped = students.map((item, index, arr) => item.name);
+
+        // alert(mapped);
+
+        // let letters = ["c","a","b"];
+
+        // let nums = [15,1,22,2];
+
+        // //letters.sort();
+        // //alert(letters);
+
+        // nums.sort((a, b) => b - a);
+
+        // alert(nums);
+
+        // let users = [
+        //     {id:79, name:"Nikolay"},
+        //     {id:78, name : "Dimas"},
+        //     {id:1, name : "Petro"}
+        // ];
+
+        //users.sort((a,b) => a.id - b.id);
+
+        //firstGroup.forEach((item, index) => console.log(`${item.name} ${index}`));
+
+        //users.forEach((item, index) => console.log(`${item.id} ${item.name}`));
+
+        // let arr = [1,2,3,1,4,5];
+
+        // function filterRange(arr,a,b){
+        //     let diap = arr.filter(item => (item >= a && item <= b));
+        //     return diap;
+        // };
+
+        // alert(filterRange(arr, 3, 5));
+
+         let users = [
+             {age:37, name : "Dimas"},
+             {age:24, name: "Nikolay"},
+             {age:46, name : "Petro"}
+         ];
+
+         function returnAgeArray(arr){
+             let newArr = [];
+             arr.forEach((item,index) => newArr.push(item.age));
+             newArr.sort((a,b) => a - b);
+             return newArr;
+         };
+
+         alert(returnAgeArray(users));
 
     </script>
 </body>
