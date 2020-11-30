@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let students = "Vasya, Misha, Petya";
+        // let studentsArr = students.split(", ");
+        // studentsArr.forEach(alert);
+        // alert(studentsArr);
+
+        // -------------------------------------------
+
+        // let students = "Petya";
+        // let studentsArr = students.split("");
+        // //studentsArr.forEach(alert);
+        // alert(studentsArr);
+
+        // -----------------------------
+
+        // let students = ["Anya", "Sveta", "Aleksondra"];
+        // let str = students.join("? ");
+        // alert(str);
+
+        // -----------------------------
+
+        // let nums = [1,2,3,4,5];
+        // let s = nums.reduce((sum, item) => sum + item, 0);
+        // alert(s);
+
+        // -----------------------------
+
+        // alert(typeof([]));
+        // alert(Array.isArray([]));
+        // alert(Array.isArray({}));
+
+        // console.log([] instanceof Array);
+
+        // -----------------------------
+
+        // let obj = {name : "Misha"};
+
+        // let map = new Map();
+
+        // map.set(0, "zero")
+        // .set(1, "one")
+        // .set("1", "string one")
+        // .set(obj, "string two");
+
+        // // alert(`${map.get(1)}, ${map.get(true)}`);
+
+        // // alert(`${map.get(obj)}`);
+
+        // // for(let key of map.keys()){
+        // //     alert(key);
+        // // }
+
+        // // for(let value of map.values()){
+        // //     alert(value);
+        // // }
+
+        // for(let entry of map){
+        //     alert("key = " + entry[0] + " value = " + entry[1]);
+        // }
+
+        // -----------------------------
+
+        // let obj = {name : "Misha", age : 25};
+
+        // let map = new Map(Object.entries(obj));
+
+        // alert(map.get("age"));
+
+        // -----------------------------
+
+        // let map = new Map([[1,"one"],[2,"two"],[3,"three"]]);
+        // alert(map.get(2));
+
+        // let map = new Map();
+        // map.set("name", "Oleg");
+        // map.set("age",12);
+        // map.set("isAlive",false);
+
+        // let deadOleg = Object.fromEntries(map);
+
+        // alert(deadOleg.isAlive);
+
+        // -----------------------------
+
+        // let set = new Set();
+
+        // set.add("one");
+        // set.add("two");
+        // set.add("three");
+        // set.add("one");
+
+        // for(let num of set){
+        //     alert(num);
+        // }
+
+        // alert(set.size);
+
+        // -----------------------------
+
+        // let set = new Set(["first","second","third"]);
+        // set.forEach((value, value2) => alert(`value = ${value} value2 = ${value2}`));
+
+        // -----------------------------
+
+        function unique(arr){
+            let newSet = new Set();
+            arr.forEach(element => {
+                newSet.add(element);
+            });
+            return Array.from(newSet);
+        };
+
+        let arr = [1,2,3,3,3,2,6,6,8,10,12,13];
+
+        alert(unique(arr));
+
+
+    </script>
+</body>
+</html>
