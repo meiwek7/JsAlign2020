@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- DOM Document Object Module -->
+
+    <!-- <p>Hello DOM!</p>
+
+    <script>
+        // document.body.style.background = "green";
+        for(let i=0;i<document.body.childNodes.length;i++){
+            console.log(document.body.childNodes[i]);
+        }
+    </script>
+    <p>Hello</p>
+    <script>
+        // document.body.style.background = "green";
+        for(let i=0;i<document.body.childNodes.length;i++){
+            console.log(document.body.childNodes[i]);
+        }
+    </script> -->
+
+    <!-- <p id="p">
+        Hello, DOM!
+    </p>
+
+    <div class="MyDiv">
+        MyDiv
+        <p>paragraph typo3 </p>
+        <p>paragraph typo3 </p>
+    </div>
+
+    <div id="myDiv">
+        <p>paragraph typo </p>
+        <p>paragraph typo2 </p>
+        <p>paragraph typo3 </p>
+        <p>paragraph typo4 </p>
+        some words
+    </div>
+
+    <button id="btn">
+        Press Me!
+    </button> -->
+
+    <table id="tbl">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <script>
+
+        // console.log(document.body.firstChild);
+
+        // console.log(document.body.lastChild);
+
+        // document.head.title.innerHTML = "smth";
+
+        // document.getElementById("p").innerText = "Bye, DOM!";
+
+        // document.getElementById("myDiv").innerText = "smth";
+
+        // alert(document.getElementById("myDiv").innerText);
+        // alert(document.getElementById("myDiv").innerHTML);
+
+        // alert(myDiv.innerText);
+
+        // alert(document.querySelector("#p").innerHTML);
+
+        // alert(document.querySelector(".MyDiv").innerHTML);
+
+        // document.querySelector("#btn").onclick = fn;
+
+        // function fn(){
+        //     let p = document.querySelectorAll("p");
+        //     for(let i=0; i<p.length;i++){
+        //         p[i].innerText = "Hello Cruel World";
+        //     }
+        // }
+
+        // function fn(str){
+        //     alert(str);
+        // }
+
+        let table = document.querySelector("#tbl");
+        // console.log(table.rows[1].cells[0].innerText);
+
+        //1
+        // for(let i = 0, myOutputString ="";i<table.rows.length;i++){
+        //     for(let j = 0;j<table.rows[i].cells.length;j++){
+        //         myOutputString += ("||" + table.rows[i].cells[j].innerText);
+        //     }
+        //     console.log(myOutputString);
+        //     myOutputString = "";
+        // }
+        
+        //3
+        for(let i = table.rows.length-1,j=0; i>=0 ;i--,j++){
+            
+            table.rows[j].cells[i].style.backgroundColor = "yellow";
+        }
+
+    </script>
+    
+</body>
+</html>
