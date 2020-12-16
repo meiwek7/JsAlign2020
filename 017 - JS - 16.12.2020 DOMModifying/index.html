@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message{
+            background-color: rgb(91, 243, 243);
+            border: 1px solid rgb(96, 105, 105);
+            border-radius: 5px;
+            color: rgb(13, 14, 14);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <button id="btn">Press me</button>
+    <button id="btnPrepend">Prepend</button>
+    <button id="btnAppend">Append</button>
+
+    <button id="btnBefore">Before</button>
+    <button id="btnAfter">After</button>
+
+    <script>
+
+        // function showMsg(){
+        //     let divMsg = document.createElement("div");
+        //     divMsg.className = "message";
+        //     divMsg.innerText = "This is sparta!";
+        //     document.body.append(divMsg);
+        // }
+        // let btn = document.getElementById("btn");
+        // btn.onclick = showMsg;
+
+        function prependLi(){
+            let ul = document.getElementById("ul");
+            let li = document.createElement("li");
+            li.innerText = "0";
+            ul.prepend(li);
+        }
+
+        function appendLi(){
+            let ul = document.getElementById("ul");
+            let li = document.createElement("li");
+            li.innerText = "4";
+            ul.append(li);
+        }
+
+        function appendBefore(){
+            let ul = document.getElementById("ul");
+            let div = document.createElement("div");
+            div.className = "message";
+            div.innerText = "Before";
+            ul.before(div);
+        }
+
+        function appendAfter(){
+            let ul = document.getElementById("ul");
+            let div = document.createElement("div");
+            div.className = "message";
+            div.innerText = "After";
+            ul.after(div);
+        }
+
+        let btnAfter = document.getElementById("btnAfter");
+        btnAfter.onclick = appendAfter;
+
+        let btnBefore = document.getElementById("btnBefore");
+        btnBefore.onclick = appendBefore;
+
+        let btnPrepend = document.getElementById("btnPrepend");
+        btnPrepend.onclick = prependLi;
+
+        let btnAppend = document.getElementById("btnAppend");
+        btnAppend.onclick = appendLi;
+    </script>
+</body>
+</html>

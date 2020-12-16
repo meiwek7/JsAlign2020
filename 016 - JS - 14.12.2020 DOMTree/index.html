@@ -102,7 +102,7 @@
         //     alert(str);
         // }
 
-        let table = document.querySelector("#tbl");
+        // let table = document.querySelector("#tbl");
         // console.log(table.rows[1].cells[0].innerText);
 
         //1
@@ -115,10 +115,19 @@
         // }
         
         //3
-        for(let i = table.rows.length-1,j=0; i>=0 ;i--,j++){
+        // for(let i = table.rows.length-1,j=0; i>=0 ;i--,j++){
             
-            table.rows[j].cells[i].style.backgroundColor = "yellow";
-        }
+        //     table.rows[j].cells[i].style.backgroundColor = "yellow";
+        // }
+
+        function count() {
+            for(var i = 0;i<3;i++){
+                alert("In Cycle "+i);
+            }
+            alert("Out Cycle "+i);
+        };
+
+        count();
 
     </script>
     
