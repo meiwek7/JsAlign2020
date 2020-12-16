@@ -16,18 +16,29 @@
 </head>
 
 <body>
-    <ul id="ul">
+    <!-- <ul id="ul">
         <li>1</li>
         <li>2</li>
         <li>3</li>
     </ul>
 
     <button id="btn">Press me</button>
+
     <button id="btnPrepend">Prepend</button>
+
     <button id="btnAppend">Append</button>
 
     <button id="btnBefore">Before</button>
+
     <button id="btnAfter">After</button>
+
+    <button id="btnHtml">btn html</button>
+
+    <button id="remove">remove</button>
+
+    <button id="showMsg">show msg</button>
+
+    <button id="clone">clone</button>
 
     <script>
 
@@ -39,6 +50,25 @@
         // }
         // let btn = document.getElementById("btn");
         // btn.onclick = showMsg;
+
+        function showMsg(){
+            let divMsg = document.createElement("div");
+            divMsg.className = "message";
+            // divMsg.innerText = "This is sparta!";
+            divMsg.innerHTML = "<h1>This</h1> is sparta!";
+            document.body.append(divMsg);
+        }
+
+        document.getElementById("showMsg").onclick = showMsg;
+
+        document.getElementById("clone").onclick = () =>{
+            let div = document.querySelector(".message");
+            // let clonedDiv = div.cloneNode(true);
+            let clonedDiv = div.cloneNode(true);
+            // clonedDiv.innerText = "This is Shag!";
+            clonedDiv.querySelector("h1").innerText = "Thats!";
+            div.after(clonedDiv);
+        }
 
         function prependLi(){
             let ul = document.getElementById("ul");
@@ -81,6 +111,46 @@
 
         let btnAppend = document.getElementById("btnAppend");
         btnAppend.onclick = appendLi;
-    </script>
+
+        function insertHtml(){
+            let ul = document.getElementById("ul");
+            let html = "<h1>Hello, World!</h1>";
+            ul.insertAdjacentHTML("beforebegin", html);
+            ul.insertAdjacentHTML("beforeend", html);
+            ul.insertAdjacentHTML("afterend", html);
+            ul.insertAdjacentHTML("afterbegin", html);
+        }
+
+        function removeUl(){
+            let ul = document.getElementById("ul");
+            ul.remove();
+        }
+
+        let btnRemove = document.getElementById("remove");
+        btnRemove.onclick = removeUl;
+
+        let btnHtml = document.getElementById("btnHtml");
+        btnHtml.onclick = insertHtml;
+
+        </script>
+         -->
+
+         <button id="addUlBtn">Add</button>
+
+         <ul id="MyUl"></ul>
+
+         <script>
+            let counter = 0;
+
+            function addLi(){
+                let ul = document.getElementById("MyUl");
+                let li = document.createElement("li");
+                li.innerText = counter++;
+                ul.append(li);
+            }
+
+            addUlBtn.onclick = addLi;
+
+         </script>
 </body>
 </html>
