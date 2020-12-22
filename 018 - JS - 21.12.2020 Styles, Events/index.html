@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            border:1px solid green;
+            background-color: pink;
+            position: relative;
+            top: 50px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body class="someClass body">
+    <!-- <div id="div">
+        some text
+    </div>
+
+    <button onclick="alert('hello!')">
+        hello
+    </button> -->
+
+    <button id = "btn">
+        MyFavoriteBTN
+    </button>
+
+    <!-- <button id = "btn" onclick="alert('queck')">
+        MyFavoriteBTN
+    </button> -->
+
+    <!-- <button onclick="f()">
+        click me
+    </button>
+
+    <button onclick="f1()">
+        click me 2
+    </button>
+
+    <button onclick="f2()">
+        click me 3
+    </button> -->
+
+    <script>
+
+        // function f2(){
+        //     let div = document.querySelector("#div");
+        //     let styles = getComputedStyle(div);
+        //     alert(styles.border);
+        // }
+
+        // function f1(){
+        //     document.querySelector("#div").style.border="1px solid black";
+
+        //     document.querySelector("#div").style.cssText="border:1px solid green;"+"background-color:red;";
+            
+        //     alert(document.querySelector("#div").style.cssText);
+        // }
+
+        // //alert(document.body.className);
+
+        // document.body.classList.add('someExtraClass',"Kek");
+
+        // document.body.classList.remove('someExtraClass',"Kek");
+
+        // alert(document.body.classList.contains("Kukich"));
+
+        // for(let cls of document.body.classList){
+        //     alert(cls);
+        // }
+
+        // function f(){
+        //     document.querySelector(".body").style.display = "none";
+        //     setTimeout(()=>{
+        //         document.querySelector(".body").style.display = "";
+        //     }, 3000);
+
+        //     //document.body.style
+
+        // }
+        // function fun(a){
+        //     alert(a);
+        // }
+
+        // function fun1(){
+        //     alert("first");
+        // }
+
+        // function fun2(){
+        //     alert("second");
+        // }
+
+        
+        let btn = document.querySelector("#btn");
+        // btn.addEventListener("click", fun1);
+        // btn.addEventListener("click", fun2);
+        // btn.addEventListener("click", (e)=>{alert("Hello! Ya Lambda!"+e+" x = "+e.clientX+" y "+e.clientY+" "+e.type)});
+        
+        // btn.addEventListener("click", (e)=>{console.log(e.clientX + " "+ e.clientY)});
+
+        btn.addEventListener("click", (e)=>{
+            document.querySelector("#btn").style.cssText="top:"+e.clientX+20+";";
+            document.querySelector("#btn").style.cssText="right:"+e.clientY+20+";";
+            }
+             );
+
+
+
+        // btn.onclick = fun.bind(null, "hello");
+        // // btn.onclick = function (){alert("smth")};
+        // btn.onclick = function (){alert(this.innerText)};
+
+    </script>
+</body>
+</html>
