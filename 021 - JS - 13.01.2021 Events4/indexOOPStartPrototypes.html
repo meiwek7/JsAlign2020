@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal = {
+            walks : true,
+            eats : "food",
+            getType(){
+                alert("animal");
+            }
+        }
+
+        let rabbit = {
+            jump : true,
+            eats : "shoto",
+            getType(){
+                alert("rabbit");
+            },
+
+            parent : true,
+
+            set isParent(value){
+                this.parent = value;
+            },
+
+            get isParent(){
+                return this.parent;
+            },
+
+            __proto__ : animal
+        }
+
+        let fatRabbit = {
+            __proto__ : rabbit,
+            isFat : "da",
+        }
+
+        fatRabbit.isParent = false;
+        alert(rabbit.isParent);
+
+        // fatRabbit.walks = false;
+        // alert(fatRabbit.isFat);
+        // alert(fatRabbit.walks);
+        // alert(animal.walks);
+
+        // rabbit.__proto__ = animal;
+
+        // rabbit.getType();
+
+        // alert(rabbit.eats);
+
+    </script>
+</body>
+</html>

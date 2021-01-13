@@ -6,6 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" onchange="alert('hi')">
+    <form action="">
+        <input type="text" onchange="alert(this.value)">
+        <input type="button" value="OK">
+        <!-- prevent default -->
+        <select onchange="alert(this.value)">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+
+        <input type="text" id="text">
+        <div id="result"></div>
+
+        <script>
+            document.querySelector("#text").oninput = function(){
+                document.querySelector("#result").innerText = document.querySelector("#text").value;  
+            }
+        </script>
+
+        <input type="text" id="textToCopy" value="textToCopy">
+
+        <script>
+
+            let text = document.querySelector("#textToCopy");
+            text.addEventListener("copy", function(event){
+                alert(event.type+" "+event.clipboardData.getData("text/plain"));
+                return false;
+            });
+
+            text.addEventListener("paste", function(event){
+                alert(event.type+""+event.clipboardData.getData("text/plain"));
+                return false;
+            });
+
+            text.addEventListener("cut", function(event){
+                alert(event.type+""+event.clipboardData.getData("text/plain"));
+                return false;
+            });
+        </script>
+
+
+    </form>
+
 </body>
 </html>
