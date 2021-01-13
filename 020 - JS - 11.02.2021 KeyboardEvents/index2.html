@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="inp">
+        <textarea id="area" cols="30" rows="10"></textarea>
+        <input type="button" value="Clear" onclick="area.value=''"></input>
+    </form>
+    <script>
+        let inp = document.querySelector("#inp");
+        inp.addEventListener("keydown", handler);
+        inp.addEventListener("keyup", handler);
+        inp.addEventListener("keypress", handler);
+        
+        function handler(event){
+            // let str = event.type + " key=" + event.key + " code = " + event.code + (event.ctrlKey ? " ctrl": "") + "\n";
+            // document.querySelector("#area").value += str;
+            document.querySelector("#area").value += event.repeat;
+        }
+    </script>
+</body>
+</html>

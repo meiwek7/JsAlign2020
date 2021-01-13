@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="p1" placeholder="p1">
+    <input type="text" id="p2" placeholder="p2">
+
+    <button id="sum">sum</button>
+    <button id="minus">minus</button> -->
+
+    <button id="test">click me</button>
+
+    <script>
+
+        let test = document.querySelector("#test");
+
+        test.addEventListener("click", function(event){
+            if(event.altKey || event.shiftKey || event.ctrlKey){
+                console.log("ok");
+            }
+        });
+
+        // test.addEventListener("mousedown", function(e){
+        //     console.log(e.type + e.which);
+        // });
+
+        // test.addEventListener("mouseup", function(e){
+        //     console.log(e.type + e.which);
+        // });
+
+        // test.addEventListener("click", function(e){
+        //     console.log(e.type + e.which);
+        // });
+
+        // let sumBtn = document.querySelector("#sum");
+
+        // function sum(event){
+        //     let p1 = +document.querySelector("#p1").value;
+        //     let p2 = +document.querySelector("#p2").value;
+        //     //let p1 = event.currentTarget.p1;
+        //     //let p2 = event.currentTarget.p2;
+
+        //     alert(p1 + p2);
+        // }
+
+        // sumBtn.addEventListener("click", sum);
+
+        // let minusBtn = document.querySelector('#minus');
+
+        // function min(m1, m2){
+        //     alert(m1 - m2);
+        // }
+
+        // minusBtn.addEventListener("click", function(event){
+        //     min(10, 12);
+        // });
+
+    </script>
+</body>
+</html>

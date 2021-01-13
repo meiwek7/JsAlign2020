@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #arrow{
+            position: fixed;
+            margin-top: 30px;
+            margin-left: 20px;
+            font-size: 50px;
+            color:red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollDiv"></div>
+
+    <div id="arrow" hidden>↑</div>
+
+    <script>
+
+        for (let index = 0; index < 1000; index++) {
+           document.body.innerHTML += index + "<br>";
+        }
+
+        document.querySelector("#arrow").addEventListener("click",function(){
+            window.scrollTo(pageXOffset, 0);
+        });
+
+        window.addEventListener("scroll", function(){
+            document.querySelector("#arrow").hidden = pageYOffset == 0;
+        });
+
+        // window.addEventListener("scroll", function(){
+        //     document.querySelector("#scrollDiv").innerHTML = pageYOffset;
+        // });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input type="text" id="inp" />
+      <textarea id="area" cols="30" rows="10"></textarea>
+      <input type="button" value="clear" onclick="area.value=' '" />
+    </form>
+    <script>
+      let inp = document.querySelector("#inp");
+      inp.addEventListener("keydown", headler);
+      inp.addEventListener("keyup", headler);
+      inp.addEventListener("keypress", headler);
+      function headler(event) {
+        let str =
+          event.type + " key= " + event.key + " code= " + event.code + "\n";
+        document.querySelector("#area").value += str;
+      }
+    </script>
+  </body>
+</html>

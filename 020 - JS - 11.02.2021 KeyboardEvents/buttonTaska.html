@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <textarea id="area" cols="30" rows="10"></textarea>
+    </form>
+    <script>
+        let area = document.querySelector("#area");
+        area.addEventListener("keyup", handler);
+        
+        function handler(event){
+            if(!(event.key >='0' && event.key <='9'))
+                document.querySelector("#area").value = document.querySelector("#area").value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>
