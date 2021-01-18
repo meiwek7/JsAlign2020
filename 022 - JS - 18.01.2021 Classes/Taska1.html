@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p><b>Ваше имя:</b><br>
+         <input type="text" id="name" size="40">
+        </p>
+        <p><b>Ваш гендер:</b><Br>
+            <input type="checkbox" id="genderMale" value="male">
+            <label for="gender"> Male</label><br>
+            <input type="checkbox" id="genderFemale" value="female">
+            <label for="gender"> Female</label><br>
+            <input type="checkbox" id="genderOther" value="other">
+            <label for="gender"> Other</label><br>
+        </p>
+        <p><input type="submit" value="Submit" onclick="createClass()"></p>
+        
+       </form>
+
+       <script>
+           class User {
+            constructor(name, gender){
+                this.name = name;
+                this.gender = gender;
+            }
+
+            get name(){
+                return this._name;
+            }
+
+            set name(value){
+                this._name = value;
+            }
+
+            get gender(){
+                return this._gender;
+            }
+
+            set gender(value){
+                this._gender = value;
+            }
+
+            sayInfo(){
+                alert(`${this.name} is ${this.gender}`);
+            }
+        }
+
+        function getCheckboxResults(){
+            if(document.querySelector('#genderMale').checked == true)
+                return "male";
+            if(document.querySelector('#genderFemale').checked == true)
+                return "female";
+            if(document.querySelector('#genderOther').checked == true)
+                return "other";
+        }
+
+        function createClass(){
+            
+
+            let ourUser = new User(document.querySelector('#name').value, getCheckboxResults());
+            ourUser.sayInfo();
+        }
+
+       </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class User {
+            constructor(name, group){
+                this.name = name;
+                this.userGroup = group;
+            }
+
+            get name(){
+                return this._name;
+            }
+
+            set name(value){
+                if(value.length < 6){
+                    alert("name too short!");
+                    return;
+                }
+                this._name = value;
+            }
+
+            sayName(){
+                alert(this.name);
+            }
+
+            sayInfo(){
+                alert(`${this.name} ${this.userGroup}`);
+            }
+        }
+
+        let Yan = new User("Yan", 12);
+        Yan.sayInfo();
+
+        // let vasya = new User("Vasya", 12);
+        // vasya.name = "Misha";
+        // alert(vasya.name);
+
+        // vasya.sayName();
+        // let misha = new User("Misha");
+        // misha.sayName();
+
+        // vasya.sayInfo();
+        // misha.sayInfo();
+
+        // let Student = class NewStudent{
+        //     // class expressions
+        //     constructor(name){
+        //         this.name = name;
+        //     }
+
+        //     sayName(){alert(this.name);}
+        // }
+
+        // new Student("petya").sayName();
+
+        //new User().sayName();
+
+        // class User{
+        //     name = "Some User";
+
+        //     sayName(){
+        //         alert(this.name);
+        //     }
+        // }
+
+        // let user = new User();
+        // user.name = "Misha";
+        // user.sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

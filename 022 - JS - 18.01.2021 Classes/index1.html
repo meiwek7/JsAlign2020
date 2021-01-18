@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Animal{
+            constructor(name){
+                this.distance = 0;
+                this.name = name;
+            }
+
+            walk(distance){
+                this.distance = distance;
+                alert(`${this.name} walks ${this.distance} km`);
+            }
+
+            stop(){
+                this.distance = 0;
+                alert(`${this.name} stop.`);
+            }
+        }
+
+        class Bird extends Animal{
+            constructor(name, color){
+                super(name);
+                this.color = color;
+            }
+
+            walk(distance){
+                super.walk(distance);
+                alert("bird walks on two legs.");
+            }
+
+            fly(){
+                alert(`${this.color} bird ${this.name} fly away!`);
+            }
+        }
+
+        let uarabey = new Bird("Veronika", "green");
+        uarabey.walk(3);
+        uarabey.stop();
+        uarabey.fly();
+
+        // let animal = new Animal("Uarabey Vasya");
+        // animal.walk(10);
+        // animal.stop();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
