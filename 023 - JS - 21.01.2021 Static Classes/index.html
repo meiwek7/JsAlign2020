@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class CoffeeMachine{
+            #capacity = 120;
+            _waterAmount = 0;
+
+            #calculateCapacity(){
+                console.log(this.#capacity);
+            }
+
+            constructor(power, waterAmount){
+                this.power = power;
+                this._waterAmount = waterAmount;
+                alert(`power = ${power} water=${waterAmount}`);
+                this.#calculateCapacity();
+            }
+
+            get waterAmount(){return this._waterAmount;}
+            // set waterAmount(value){
+            //     if(value >0){
+            //         this._waterAmount = value;
+            //     } else{
+            //         this._waterAmount = 0;
+            //     }
+                
+            // }
+
+        }
+
+
+
+        let coffeeMachine = new CoffeeMachine(1000, 0.7);
+
+        coffeeMachine.waterAmount = -10;
+        alert(coffeeMachine.waterAmount);
+        // alert(coffeeMachine.#capacity);
+
+        // class Student{
+        //     static cource = 1;
+
+        //     static alertSmth(smth){
+        //         alert(smth);
+        //     }
+
+        //     getCource(){return this._cource};
+        // }
+
+        // class RedStudent extends Student{
+
+        // }
+
+        // RedStudent.alertSmth("Vasya");
+
+        // let katya = new Student();
+        // let petya = new Student();
+
+        // alert(katya.cource);
+        // alert(petya.cource);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
