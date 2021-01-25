@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user = {
+            name: 'Vasya',
+            surname: 'Mishak',
+            age: 20,
+            isMale: true,
+            cources: ['math', 'phys', 'matan'],
+            params:{
+                height: 175,
+                width: 160,
+                weight: [220, "kg"]
+            },
+            // не преобразуются
+            alertName(){
+                alert(this.name);
+            },
+            ["some"]: 123,
+            smth: undefined
+        };
+
+        // class Rectangle{
+        //     #privat = "privat";
+        //     constructor(height, width){
+        //         this.height = height;
+        //         this.width = width;
+        //     }
+        // }
+
+        // let rectangle = new Rectangle(10,12);
+
+        // let serializedVasya = JSON.stringify(user,['name','surname','age','params','height'], 4);
+        
+        let date = '{"date" : "2012-04-23T18:25:00", "some":"thing"}';
+        let test;
+        let deserializedDate = JSON.parse(date, function (key, value){
+            if (key === '') { return value; }
+            if(key == "date")
+            {
+                let kek = new Date();
+                test = kek;
+                alert("HelloWorld");
+                return kek;
+            }
+        });
+
+        alert (test);
+        alert(deserializedDate.date);
+        
+        // let serializedVasya = JSON.stringify(user, null, 30);
+        // alert(serializedVasya);
+        // console.log(serializedVasya);
+        // let deserializedVasya = JSON.parse(serializedVasya);
+        // alert(deserializedVasya.name);
+        // console.log(JSON.stringify(rectangle));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
