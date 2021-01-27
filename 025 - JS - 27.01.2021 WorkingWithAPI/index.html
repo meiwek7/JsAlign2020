@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="cityName"><br><br>
+
+    <button type="button" id="findButton" onclick="printWeather()">Go!</button>
+
+    <img id="weather_icon">
+    <div id="content">
+
+    </div>
+    
+    <script>
+        function printWeather(){
+            let cityName = document.querySelector("#cityName").value;
+            const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=4a817815ddffc203e7ef99476becf971`;
+            let request = new XMLHttpRequest();
+            request.open('GET', URL, true);
+            request.onload = function(){
+            if(request.status == 200){
+                let data = JSON.parse(this.response);
+                // console.log(data);
+                let content = document.querySelector("#content");
+                content.innerHTML += data.name + "<br>";
+                content.innerHTML += data.main.temp + "<br>";
+                content.innerHTML += data.weather[0].description + "<br>";
+                document.querySelector("#weather_icon").src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                content.innerHTML += data.sys.country + "<br>";
+            } else{
+                alert("smth is going wrong!, ERR_CODE " + request.status);
+                }
+            };
+            request.send();
+        }
+    </script>
+</body>
+</html>

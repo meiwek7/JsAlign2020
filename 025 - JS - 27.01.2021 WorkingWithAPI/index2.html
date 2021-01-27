@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const data = null;
+
+        const xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+
+        xhr.addEventListener("readystatechange", function () {
+	        if (this.readyState === this.DONE) {
+		        console.log(this.responseText);
+	        }
+        });
+
+        xhr.open("GET", "https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/tt1375666");
+        xhr.setRequestHeader("x-rapidapi-key", "48b5323ef9msh65bb16e2602861bp19ed77jsnacfa51789c17");
+        xhr.setRequestHeader("x-rapidapi-host", "imdb-internet-movie-database-unofficial.p.rapidapi.com");
+
+        xhr.send(data);
+    </script>
+    
+</body>
+</html>
