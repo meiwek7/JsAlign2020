@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let promise = new Promise(function(resolve, reject){
+        //     setTimeout(() => reject(new Error("Rejected")), 2000);
+        //     setTimeout(() => resolve("OK"), 3000);
+        // });
+
+        // promise
+        // .catch(e => alert(e))
+        // .finally(()=>alert("Promise fully done!"));
+
+        // promise.then(
+        //     resolve => alert(resolve),
+        //     reject => alert(reject)
+        // )
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+    <button onclick="go()">Click me</button>
+    <script>
+        function go(){
+            let promise = new Promise(function(resolve, reject){
+                let kek = document.querySelector("#name").value.length;
+                if(document.querySelector("#name").value.length > 5){
+                    setTimeout(() => resolve("OK"), 3000);
+                }
+                else{
+                    setTimeout(() => reject(new Error("more than five")), 2000);
+                }
+            });
+
+            promise
+                .catch(e => alert(e))
+                .finally(()=>alert("Done!"));
+        }
+        
+    </script>
+    
+</body>
+</html>
