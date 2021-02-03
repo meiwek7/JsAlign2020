@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+<script>
+
+new Promise(function(resolve, reject){​​
+
+setTimeout(() => {​​
+
+resolve("first")
+
+}​​, 2000);
+
+}​​).then((result)=>{​​
+
+return result + " second "
+
+}​​).then((result)=>{​​
+
+return new Promise(function(resolve, reject){​​setTimeout(() => {​​
+
+resolve(result + "third")
+
+}​​, 2000);}​​)
+
+}​​).then((result)=>{​​
+
+alert(result)}​​);
+
+
+
+// fetch('https://api.covid19api.com/summary')
+
+// .then((response) => {​​
+
+// return response.text()
+
+// }​​)
+
+// .then((json)=>{​​
+
+// alert(json);
+
+// }​​);
+
+// .then((parsed) => {​​
+
+// alert(parsed.Countries.find(e => e.CountryCode == "UA").NewConfirmed);
+
+// }​​);
+
+
+
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
