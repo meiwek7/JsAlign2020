@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // async function someFun(){
+        //     let p = new Promise((resolve, reject)=>{
+        //         setTimeout(()=>resolve("some test string"), 3000);
+        //     })
+            
+        //     let string = await p;
+        //     return string;
+        // }
+        // someFun().then(alert);
+
+        async function showMovie(id){
+            let response = await fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=2e901364c3d103dcb00ced520e9bca3c");
+            let movie = await response.json();
+
+            let image = document.createElement("img");
+            image.src = "https://image.tmdb.org/t/p/w200/" + movie.backdrop_path;
+            document.body.append(image);
+
+            let title = document.createElement("div");
+            title.innerText = movie.belongs_to_collection.name;
+            document.body.append(title);
+
+            let description = document.createElement("div");
+            description.innerText = movie.overview;
+            document.body.append(description);
+
+            return movie;
+        }
+
+        async function filterMovies(rating){
+
+            let response = await fetch("");
+            let movies = await response.json()
+            movies = movies.results;
+
+            alert(movies[0].title);
+
+        }
+
+        filterMovies(123);
+
+        showMovie("76341").then((movie) => alert(movie.belongs_to_collection.name));
+
+
+        //Код Игоря из ТГ
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', function() {
+            const DATA = async() => {
+                await fetch(http://api.themoviedb.org/3/movie/popular?api_key=2e901364c3d103dcb00ced520e9bca3c)
+                    .then(response => response.json())
+                    .then(data => {
+                    data.results.filter(e => e.title[0] === 'A')
+                    .forEach(e => console.log(e));
+            })
+
+        }
+
+        return DATA();
+        })
+
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', function() {
+            const DATA = async() => {
+                await fetch(http://api.themoviedb.org/3/movie/popular?api_key=2e901364c3d103dcb00ced520e9bca3c)
+                    .then(response => response.json())
+                    .then(data => {
+                        data.results.filter(e => e['original_language'] === 'en')
+                            .forEach(e => console.log(e));
+                    })
+
+        }
+
+        return DATA();
+    })
+
+    </script>
+</body>
+</html>
