@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<ul id="users">
+
+</ul>
+
+<ul id="infousers">
+
+</ul>
+
+<p id="postInfo"></p>
+
+<script>
+let list = document.querySelector('#users');
+let infoList = document.querySelector('#infoList');
+
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(json => json.map((item) => {
+        let li = document.createElement('li');
+        li.innerHTML = item.name;
+        li.id = item.id;
+        list.append(li);
+        li.addEventListener('click', function(e){
+            infoList.innerHTML = '';
+            fetch(`https://jsonplaceholder.typicode.com/users/${item.id}`)
+                .then(data => data.json())
+                .then(data => infoList.innerHTML= `
+                <li>${data.name}</li>
+                <li>${data.username}</li>
+                <li>${data.phone}</li>
+                <li>${data.email}</li>
+                <li>${data.website}</li>
+                <li>${data.address.street} </li>
+                <li>${data.address.suite}</li>
+                <li><button id='show-btn'>Show posts</button></li>
+                `
+                )
+                    .then(data=> console.log(data));
+            // $('#show-btn').addEventListener('click', function () {
+            //     fetch(`https://jsonplaceholder.typicode.com/posts/${item.id}`)
+            //         .then(data => data.json())
+            //         .then(data => $('postInfo').innerHTML = data.body)
+            // })
+
+            )
+        });
+    }));
+    </script>
+</body>
+</html>
