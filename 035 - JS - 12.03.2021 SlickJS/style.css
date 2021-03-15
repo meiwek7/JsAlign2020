@@ -1,0 +1,69 @@
+body{
+    font-family: 'Arimo', sans-serif;
+   
+}
+
+img{
+    width:100%;
+    height:100%;
+}
+
+.title{
+    font-family: 'Poiret One', cursive;
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section_title{
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+
+}
+
+.subtitle{
+    text-align: center;
+}
+
+.title:after{
+    content: "со скидкой 45%";
+    font-weight: bolder;
+    font-size: 0.5em;
+    opacity: .6;
+}
+
+#timer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.hours:after, .minutes:after {
+    content: ':';
+}
+
+.price_block{
+    display:flex;
+    justify-content: space-between;
+}
+
+.slider-for .slick-slide, .slider-for2 .slick-slide, .slider-for3 .slick-slide{
+    height: 400px;
+}
+
+.slick-track img{
+    margin-top: 20px;
+    height:100px;
+}
+
+section{
+    margin: 100px 0;
+}
+
+video{
+    width:100%;
+}
