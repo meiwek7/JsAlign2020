@@ -1,0 +1,30 @@
+Реак підтримує компонентний підхід.
+Є 2 види компонент - функціональна і класова.
+Зараз розглядемо функціональну.
+-----
+folder "components" file "Test.js"
+-----
+import React from "react";
+
+let Test = () => {
+  return <div>Test1</div>;
+};
+
+export default Test;
+-----
+import "./styles.css";
+import Test from "./components/Test";
+import Weather from "./components/Weather";
+import Person from "./components/Person";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Weather city="Kyiv" temperature={20} />
+      <Weather city={"Odesa"} temperature={35} />
+      <Weather city={"Zhutomur"} temperature={17} />
+      <Person name="Sergiy" age={32} />
+      <Person name="Stepan" age={40} />
+    </div>
+  );
+}
